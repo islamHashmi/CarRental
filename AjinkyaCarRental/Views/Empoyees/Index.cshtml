@@ -1,0 +1,137 @@
+﻿@model IEnumerable<AjinkyaCarRental.Context.Employee>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.employeeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.residentiallAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nativeAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mobileNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.residentialTelephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.joiningDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.leavingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.basicAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hraAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ccAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.accountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.entryBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.entryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.updatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.updatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyBranch.branchName)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.employeeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.residentiallAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nativeAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mobileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.residentialTelephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.joiningDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.leavingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.basicAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hraAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ccAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.accountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.entryBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.entryDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.updatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.updatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyBranch.branchName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.employeeId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.employeeId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.employeeId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
